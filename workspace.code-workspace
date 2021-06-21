@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../../../js self-studying/12-Numbers-Dates-Timers-Bankist"
+	},
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../../../../../Applications/MAMP/htdocs/PHP basic"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "13-Advanced-DOM-Bankist"
+  }
+}
