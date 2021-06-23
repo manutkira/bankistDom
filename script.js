@@ -115,3 +115,29 @@ const handleHover = function (e) {
 };
 nav.addEventListener('mouseover', handleHover.bind(0.4));
 nav.addEventListener('mouseout', handleHover.bind(1));
+
+//nav sticky
+// const initialCoords = section1.getBoundingClientRect();
+
+// window.addEventListener('scroll', function () {
+//   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// });
+
+//sticky nav: Intersection observer API
+const header = document.querySelector('.header');
+
+const sticky = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+};
+
+const headerObserver = new IntersectionObserver(sticky, {
+  root: null,
+  threshold: 0,
+  rootMargin: '-90px',
+});
+
+headerObserver.observe(header);
